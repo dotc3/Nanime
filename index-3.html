@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0817">
+<title>AnimeVerse — Discover your next obsession</title>
+<style>
+:root{--bg:#090713;--panel:#151126;--panel2:#1c1632;--text:#f8f5ff;--muted:#b7adcf;--pink:#ff3fa4;--violet:#8b5cf6;--cyan:#4de5ff;--line:#302447}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% -10%,#39206b 0,transparent 40%),var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;color:white;background:linear-gradient(110deg,var(--pink),var(--violet));border-radius:12px;padding:10px 15px;font-weight:750}button.secondary{background:#211a36;border:1px solid var(--line)}a{color:#d8b4fe}.top{position:sticky;top:0;z-index:4;display:flex;align-items:center;gap:16px;padding:14px 4vw;background:#0b0817eF;border-bottom:1px solid var(--line);backdrop-filter:blur(15px)}.logo{font-weight:950;font-size:24px;letter-spacing:-1px;white-space:nowrap}.logo span{color:var(--pink)}.search{flex:1;max-width:650px}.search input{width:100%;background:#17122a;border:1px solid #3a2a58;color:white;border-radius:99px;padding:12px 17px;outline:none}.search input:focus,textarea:focus{border-color:var(--pink)}.top .right{margin-left:auto;display:flex;gap:8px}.layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:24px;max-width:1500px;margin:auto;padding:22px 3vw}.side{position:sticky;top:86px;align-self:start}.side button{display:block;width:100%;text-align:left;margin-bottom:7px;background:transparent;color:var(--muted);font-weight:600}.side button.active,.side button:hover{background:#29184b;color:white}.side small{display:block;color:#8e80ab;margin:22px 12px 8px}.main{min-width:0}.hero{position:relative;min-height:310px;overflow:hidden;border-radius:24px;padding:32px;display:flex;align-items:end;background:linear-gradient(90deg,#10091eee 0%,#10091e99 50%,#10091e00 100%),linear-gradient(135deg,#3d1767,#d72e87 48%,#111b50);border:1px solid #4a2b6c;isolation:isolate}.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 75% 35%,#ff65b9 0,transparent 17%),radial-gradient(circle at 82% 60%,#4de5ff 0,transparent 20%),linear-gradient(135deg,transparent 45%,#130d2a 100%);opacity:.9}.hero:after{content:"✦  ✧  ✦";position:absolute;right:4%;top:10%;font-size:80px;color:#ffffff28;transform:rotate(-12deg);z-index:-1}.eyebrow{display:inline-flex;gap:7px;align-items:center;color:#ffd4ec;background:#5c1c5b88;border:1px solid #b044a8;padding:5px 10px;border-radius:99px;font-size:12px;font-weight:800}.hero h1{font-size:clamp(34px,5vw,60px);line-height:1.02;margin:14px 0 10px;max-width:580px;letter-spacing:-2px}.hero p{max-width:500px;color:#e1d8f1}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:28px 0 14px}.section-head h2{margin:0;font-size:22px;letter-spacing:-.5px}.section-head p{margin:2px 0 0;color:var(--muted);font-size:13px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.filters button{padding:7px 12px;font-size:13px}.filters button.selected{box-shadow:0 0 0 2px #ff8bc8 inset}.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}.card{background:linear-gradient(160deg,#1b1530,#100d1d);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .2s,border-color .2s;min-width:0}.card:hover{transform:translateY(-4px);border-color:#8a4cd5}.poster{height:150px;display:flex;align-items:center;justify-content:center;position:relative;font-size:56px;overflow:hidden;background:var(--art,linear-gradient(135deg,#46206d,#e73b9e))}.poster:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#090713aa,transparent 65%)}.poster .symbol{filter:drop-shadow(0 4px 14px #0008);z-index:1}.rating{position:absolute;right:8px;bottom:8px;z-index:2;background:#080611dd;border:1px solid #ffffff22;border-radius:8px;padding:3px 7px;font-size:12px;font-weight:800}.card-body{padding:12px}.card h3{margin:0 0 5px;font-size:15px;line-height:1.2}.meta{font-size:12px;color:var(--muted)}.tags{display:flex;gap:5px;flex-wrap:wrap;margin:9px 0}.tag{font-size:10px;background:#2a2040;color:#d8c8f5;border-radius:5px;padding:3px 6px}.card-actions{display:flex;gap:6px;margin-top:10px}.card-actions button{flex:1;padding:7px 8px;font-size:12px}.empty{color:var(--muted);padding:30px;text-align:center;border:1px dashed var(--line);border-radius:16px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:18px}.panel h3{margin:0 0 12px}.genre-list{display:flex;gap:8px;flex-wrap:wrap}.genre{padding:9px 12px;border-radius:10px;background:#211a36;border:1px solid var(--line);color:#eee3ff}.rank{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #2a213a}.rank:last-child{border:0}.rank b{color:#d8b4fe;width:22px}.rank .grow{flex:1}.rank small{color:var(--muted)}.notice{background:#19132a;border:1px solid #493264;border-radius:12px;padding:12px;color:#cfc1e8;font-size:13px}.footer{padding:30px 0;color:#8d82a4;font-size:12px}.modal{display:none;position:fixed;inset:0;background:#05030bd9;z-index:9;padding:18px;align-items:center;justify-content:center}.modal.open{display:flex}.modal-box{width:min(560px,100%);max-height:90vh;overflow:auto;background:#151126;border:1px solid #51346c;border-radius:20px;padding:22px;box-shadow:0 20px 80px #0009}.modal-head{display:flex;justify-content:space-between;align-items:center;gap:12px}.modal-head h2{margin:0}.x{background:transparent;font-size:24px;padding:0 8px}.field{display:grid;gap:6px;margin:14px 0}.field label{color:#d9cdec;font-size:13px}.field input,.field select,.field textarea{width:100%;background:#0d0a18;border:1px solid var(--line);border-radius:10px;padding:11px;color:white}.field textarea{min-height:90px;resize:vertical}.review{padding:12px 0;border-bottom:1px solid var(--line)}.review:last-child{border:0}.review strong{color:#f7d6ff}.muted{color:var(--muted)}.hide{display:none!important}
+@media(max-width:1050px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.layout{grid-template-columns:150px minmax(0,1fr);gap:15px}.poster{height:130px}}
+@media(max-width:700px){.top{padding:12px 4vw;gap:9px;flex-wrap:wrap}.logo{font-size:21px}.search{order:3;flex-basis:100%;max-width:none}.top .right button{padding:8px 10px;font-size:12px}.layout{display:block;padding:16px 4vw}.side{position:static;display:flex;overflow:auto;gap:5px;margin-bottom:15px}.side button{white-space:nowrap;width:auto;margin:0;padding:9px 12px}.side small{display:none}.hero{min-height:290px;padding:22px}.hero h1{font-size:39px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.poster{height:145px}.columns{grid-template-columns:1fr}.section-head h2{font-size:19px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="logo">✦ Anime<span>Verse</span></div>
+  <div class="search"><input id="search" placeholder="⌕  Search anime, genres..." aria-label="Search anime"></div>
+  <div class="right"><button class="secondary" id="myListBtn">♡ My List</button><button id="reviewTop">Write a review</button></div>
+</header>
+<div class="layout">
+  <nav class="side" aria-label="Main navigation">
+    <button class="active" data-view="home">⌂ &nbsp; Home</button>
+    <button data-view="browse">⌕ &nbsp; Browse</button>
+    <button data-view="trending">♨ &nbsp; Trending</button>
+    <button data-view="top">★ &nbsp; Top rated</button>
+    <button data-view="new">✦ &nbsp; New picks</button>
+    <small>YOUR ANIME SPACE</small>
+    <button data-view="list">♡ &nbsp; My List</button>
+    <button data-view="reviews">☷ &nbsp; My Reviews</button>
+  </nav>
+  <main class="main">
+    <section class="hero" id="hero">
+      <div>
+        <span class="eyebrow">✦ YOUR NEXT OBSESSION STARTS HERE</span>
+        <h1>Find your next<br><span style="color:#ff8bd0">anime obsession.</span></h1>
+        <p>Explore new worlds, rate the stories you love, and find your people. Your watchlist starts here.</p>
+        <div class="actions"><button id="exploreBtn">Explore anime ↗</button><button class="secondary" id="surpriseBtn">Surprise me ✧</button></div>
+      </div>
+    </section>
+    <div id="content"></div>
+    <div class="footer">ANIMEVERSE · Fan-made discovery prototype. Not affiliated with anime studios or streaming services. Ratings shown are demo data until users contribute.</div>
+  </main>
+</div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-box"><div class="modal-head"><h2 id="modalTitle">Anime details</h2><button class="x" id="closeModal" aria-label="Close">×</button></div><div id="modalContent"></div></div></div>
+<script>
+const anime = [
+{id:1,title:"Demon Slayer",year:2019,score:9.0,genres:["Action","Fantasy"],emoji:"⚔️",art:"linear-gradient(135deg,#102e58,#e94270 55%,#ffb25e)",desc:"A determined young swordsman fights demons and searches for a way to save his sister.",status:"Completed",watch:"https://www.crunchyroll.com/"},
+{id:2,title:"Jujutsu Kaisen",year:2020,score:8.8,genres:["Action","Supernatural"],emoji:"👁️",art:"linear-gradient(135deg,#16133d,#7924a6,#e94774)",desc:"Students confront dangerous curses in a world where negative emotions take form.",status:"Ongoing",watch:"https://www.crunchyroll.com/"},
+{id:3,title:"Solo Leveling",year:2024,score:8.7,genres:["Action","Fantasy"],emoji:"🌌",art:"linear-gradient(135deg,#061b3a,#164b9c,#10101b)",desc:"A once-weak hunter discovers a mysterious system that lets him grow stronger.",status:"Ongoing",watch:"https://www.crunchyroll.com/"},
+{id:4,title:"Frieren: Beyond Journey's End",year:2023,score:9.3,genres:["Fantasy","Adventure"],emoji:"🌿",art:"linear-gradient(135deg,#74d4c2,#397bb1,#e9e9a6)",desc:"An elven mage explores memory, friendship, and what it means to understand people.",status:"Ongoing",watch:"https://www.crunchyroll.com/"},
+{id:5,title:"One Piece",year:1999,score:9.0,genres:["Adventure","Comedy"],emoji:"🏴‍☠️",art:"linear-gradient(135deg,#0c7899,#ffc44d,#d84b38)",desc:"A rubber-powered pirate and his crew sail toward the legendary treasure.",status:"Ongoing",watch:"https://www.crunchyroll.com/"},
+{id:6,title:"Spy x Family",year:2022,score:8.5,genres:["Comedy","Action"],emoji:"🕵️",art:"linear-gradient(135deg,#d5a0c8,#4d91a6,#f3c85c)",desc:"A spy, an assassin, and a telepath form an unusual family with secrets.",status:"Ongoing",watch:"https://www.crunchyroll.com/"},
+{id:7,title:"Blue Lock",year:2022,score:8.2,genres:["Sports","Drama"],emoji:"⚽",art:"linear-gradient(135deg,#092c69,#1f92d4,#13204b)",desc:"Strikers compete in an intense program designed to create Japan's ultimate forward.",status:"Ongoing",watch:"https://www.crunchyroll.com/"},
+{id:8,title:"The Apothecary Diaries",year:2023,score:9.1,genres:["Drama","Mystery"],emoji:"🌸",art:"linear-gradient(135deg,#397c69,#c6a0b8,#edb85d)",desc:"A sharp-minded apothecary solves mysteries inside an imperial court.",status:"Ongoing",watch:"https://www.crunchyroll.com/"},
+{id:9,title:"Attack on Titan",year:2013,score:9.1,genres:["Action","Drama"],emoji:"🪽",art:"linear-gradient(135deg,#273d32,#b55d3c,#151a25)",desc:"Humanity fights for survival behind enormous walls in a world of terrifying giants.",status:"Completed",watch:"https://www.crunchyroll.com/"},
+{id:10,title:"Hunter x Hunter",year:2011,score:9.0,genres:["Adventure","Fantasy"],emoji:"🟢",art:"linear-gradient(135deg,#237c63,#a7c65d,#e4c17a)",desc:"A young hunter searches for his father and discovers a vast, dangerous world.",status:"Completed",watch:"https://www.crunchyroll.com/"},
+{id:11,title:"Your Name",year:2016,score:8.8,genres:["Romance","Drama"],emoji:"☄️",art:"linear-gradient(135deg,#2e4e9a,#a9c9ec,#ed8ab9)",desc:"Two teenagers mysteriously begin swapping lives across distance and time.",status:"Movie",watch:"https://www.netflix.com/"},
+{id:12,title:"Mob Psycho 100",year:2016,score:8.7,genres:["Comedy","Supernatural"],emoji:"💥",art:"linear-gradient(135deg,#e4d55b,#8b5cf6,#29215c)",desc:"A quiet student with extraordinary psychic powers tries to grow as a person.",status:"Completed",watch:"https://www.crunchyroll.com/"}
+];
+let view="home", genre="All", query="", selected=null;
+const getStore=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}};
+const save=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+let list=getStore("av-list",[]), reviews=getStore("av-reviews",[]);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function filtered(){
+ let a=[...anime];
+ if(view==="trending")a.sort((x,y)=>y.year-x.year);
+ if(view==="top")a.sort((x,y)=>y.score-x.score);
+ if(view==="new")a.sort((x,y)=>y.year-x.year);
+ if(view==="list")a=a.filter(x=>list.includes(x.id));
+ if(view==="reviews")a=a.filter(x=>reviews.some(r=>r.id===x.id));
+ if(genre!=="All")a=a.filter(x=>x.genres.includes(genre));
+ if(query)a=a.filter(x=>(x.title+" "+x.genres.join(" ")+" "+x.desc).toLowerCase().includes(query.toLowerCase()));
+ return a;
+}
+function card(a){let mine=reviews.filter(r=>r.id===a.id);let score=mine.length?(mine.reduce((s,r)=>s+Number(r.rating),0)/mine.length).toFixed(1):a.score.toFixed(1);
+return `<article class="card"><div class="poster" style="--art:${a.art}"><span class="symbol">${a.emoji}</span><span class="rating">★ ${score}</span></div><div class="card-body"><h3>${esc(a.title)}</h3><div class="meta">${a.year} · ${a.status} · ${mine.length} user review${mine.length===1?"":"s"}</div><div class="tags">${a.genres.map(g=>`<span class="tag">${g}</span>`).join("")}</div><div class="card-actions"><button onclick="details(${a.id})">Details</button><button class="secondary" onclick="toggleList(${a.id})" title="Save to My List">${list.includes(a.id)?"♥ Saved":"♡ Save"}</button></div></div></article>`}
+function section(title,sub,arr){return `<div class="section-head"><div><h2>${title}</h2><p>${sub}</p></div></div><div class="grid">${arr.map(card).join("")||'<div class="empty" style="grid-column:1/-1">No anime found. Try another search or genre.</div>'}</div>`}
+function render(){
+ document.querySelectorAll(".side [data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view===view));
+ const a=filtered();let out="";
+ if(view==="home"&&!query&&genre==="All"){
+  out+=section("🔥 Trending now","Popular picks to get your watchlist moving",anime.slice().sort((x,y)=>y.score-x.score).slice(0,5));
+  out+=`<div class="section-head"><div><h2>✦ Explore by mood</h2><p>Pick a genre and follow the feeling.</p></div></div><div class="genre-list">${["Action","Adventure","Comedy","Drama","Fantasy","Romance","Sports","Supernatural","Mystery"].map(g=>`<button class="genre" onclick="chooseGenre('${g}')">${g} ✧</button>`).join("")}</div>`;
+  out+=section("⭐ Community favourites","A starter selection with demo scores",anime.slice().sort((x,y)=>y.score-x.score).slice(0,10));
+ }else{
+  let title={browse:"Browse anime",trending:"Trending anime",top:"Top rated anime",new:"New picks",list:"My List",reviews:"Anime you've reviewed",home:"Search results"}[view]||"Anime";
+  out+=`<div class="section-head"><div><h2>${title}</h2><p>${a.length} titles · Your ratings and reviews stay on this device in this prototype.</p></div></div>`;
+  out+=`<div class="filters">${["All","Action","Adventure","Comedy","Drama","Fantasy","Romance","Sports","Supernatural","Mystery"].map(g=>`<button class="${genre===g?"selected":"secondary"}" onclick="chooseGenre('${g}')">${g}</button>`).join("")}</div><div class="grid">${a.map(card).join("")||'<div class="empty" style="grid-column:1/-1">Nothing here yet. Search another title or save anime from Browse.</div>'}</div>`;
+ }
+ out+=`<div class="section-head"><div><h2>▶ Where to watch</h2><p>Availability varies by country and title. Check the official service catalogue.</p></div></div><div class="columns"><div class="panel"><h3>Licensed streaming</h3><p class="muted">Open an official platform and search for the title you want.</p><div class="genre-list"><a href="https://www.crunchyroll.com/" target="_blank" rel="noopener">Crunchyroll ↗</a><a href="https://www.netflix.com/" target="_blank" rel="noopener">Netflix ↗</a><a href="https://www.primevideo.com/" target="_blank" rel="noopener">Prime Video ↗</a></div></div><div class="panel"><h3>✍️ Join the conversation</h3><p class="muted">Write a rating and review. This prototype saves your contribution locally on this device.</p><button onclick="openReview()">Write a review</button></div></div>`;
+ document.getElementById("content").innerHTML=out;
+}
+function chooseGenre(g){genre=g;view="browse";render();window.scrollTo({top:0,behavior:"smooth"})}
+function toggleList(id){list=list.includes(id)?list.filter(x=>x!==id):[...list,id];save("av-list",list);render()}
+function details(id){selected=anime.find(a=>a.id===id);let rs=reviews.filter(r=>r.id===id);document.getElementById("modalTitle").textContent=selected.title;document.getElementById("modalContent").innerHTML=`<p class="muted">${selected.year} · ${selected.genres.join(" / ")} · ${selected.status}</p><p>${selected.desc}</p><p><strong>Demo score:</strong> ★ ${selected.score.toFixed(1)} / 10</p><div class="actions"><button onclick="openReview(${id})">Rate & review</button><button class="secondary" onclick="toggleList(${id});details(${id})">${list.includes(id)?"Remove from My List":"Add to My List"}</button><a href="${selected.watch}" target="_blank" rel="noopener">Check official streaming ↗</a></div><h3 style="margin-top:22px">Community reviews</h3>${rs.length?rs.map(r=>`<div class="review"><strong>${"★".repeat(Number(r.rating))} ${r.rating}/10</strong><p>${esc(r.text)}</p><small class="muted">${esc(r.name||"Anime fan")}</small></div>`).join(""):'<p class="muted">No reviews yet. Be the first!</p>'}<div class="notice" style="margin-top:14px">This is a discovery prototype. It does not host full episodes. Streaming links take you to official services, where availability depends on your region.</div>`;document.getElementById("modal").classList.add("open")}
+function openReview(id){if(id)selected=anime.find(a=>a.id===id);if(!selected)selected=anime[0];document.getElementById("modalTitle").textContent="Rate & review";document.getElementById("modalContent").innerHTML=`<form id="reviewForm"><div class="field"><label for="animeSelect">Anime</label><select id="animeSelect">${anime.map(a=>`<option value="${a.id}" ${a.id===selected.id?"selected":""}>${esc(a.title)}</option>`).join("")}</select></div><div class="field"><label for="reviewName">Display name (optional)</label><input id="reviewName" maxlength="40" placeholder="Anime fan"></div><div class="field"><label for="rating">Your rating (1–10)</label><select id="rating">${[10,9,8,7,6,5,4,3,2,1].map(n=>`<option value="${n}" ${n===9?"selected":""}>${n} / 10</option>`).join("")}</select></div><div class="field"><label for="reviewText">Your review</label><textarea id="reviewText" maxlength="1200" required placeholder="What worked for you? What should new viewers know?"></textarea></div><button type="submit">Save review</button></form><p class="muted" style="font-size:12px">Prototype note: reviews are stored only in this browser. No account or shared online database yet.</p>`;document.getElementById("modal").classList.add("open");document.getElementById("reviewForm").addEventListener("submit",e=>{e.preventDefault();let id=Number(document.getElementById("animeSelect").value);reviews.unshift({id,name:document.getElementById("reviewName").value.trim(),rating:Number(document.getElementById("rating").value),text:document.getElementById("reviewText").value.trim(),date:new Date().toISOString()});save("av-reviews",reviews);selected=anime.find(a=>a.id===id);render();details(id)})}
+document.querySelectorAll("[data-view]").forEach(b=>b.addEventListener("click",()=>{view=b.dataset.view;genre="All";query="";document.getElementById("search").value="";render();window.scrollTo({top:0,behavior:"smooth"})}));
+document.getElementById("search").addEventListener("input",e=>{query=e.target.value;view="browse";render()});
+document.getElementById("myListBtn").addEventListener("click",()=>{view="list";genre="All";render()});
+document.getElementById("reviewTop").addEventListener("click",()=>openReview());
+document.getElementById("exploreBtn").addEventListener("click",()=>{view="browse";render();document.getElementById("content").scrollIntoView({behavior:"smooth"})});
+document.getElementById("surpriseBtn").addEventListener("click",()=>details(anime[Math.floor(Math.random()*anime.length)].id));
+document.getElementById("closeModal").addEventListener("click",()=>document.getElementById("modal").classList.remove("open"));
+document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")e.currentTarget.classList.remove("open")});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.getElementById("modal").classList.remove("open")});
+render();
+</script>
+</body></html>
